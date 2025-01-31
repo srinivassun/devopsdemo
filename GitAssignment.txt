@@ -1,0 +1,495 @@
+Microsoft Windows [Version 10.0.26100.2894]
+(c) Microsoft Corporation. All rights reserved.
+
+D:\DevOps\devopsdemo>git init
+Initialized empty Git repository in D:/DevOps/devopsdemo/.git/
+
+D:\DevOps\devopsdemo>git status
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+
+D:\DevOps\devopsdemo>git branch
+
+D:\DevOps\devopsdemo>git log
+fatal: your current branch 'master' does not have any commits yet
+
+D:\DevOps\devopsdemo>git status
+On branch master
+
+Initial commit
+
+nothing to commit (create/copy files and use "git add" to track)
+
+D:\DevOps\devopsdemo>git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        IFile1.txt
+        IFile2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\DevOps\devopsdemo>git add .
+
+D:\DevOps\devopsdemo>git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   IFile1.txt
+        new file:   IFile2.txt
+
+
+D:\DevOps\devopsdemo>git commit -m "First Commit"
+[master (root-commit) a6bb53e] First Commit
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 IFile1.txt
+ create mode 100644 IFile2.txt
+
+D:\DevOps\devopsdemo>git status
+On branch master
+nothing to commit, working directory clean
+
+D:\DevOps\devopsdemo>git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+D:\DevOps\devopsdemo>git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+D:\DevOps\devopsdemo>git push master
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream master master
+
+
+D:\DevOps\devopsdemo>git status
+On branch master
+nothing to commit, working directory clean
+
+D:\DevOps\devopsdemo>git log
+commit a6bb53e961e7a5136eb0f5926c1dbce175580215
+Author: srinivass <srinivasarao.sunnam29@gmail.com>
+Date:   Fri Jan 31 22:11:35 2025 +0530
+
+    First Commit
+
+D:\DevOps\devopsdemo>git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+D:\DevOps\devopsdemo>git push -u
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+D:\DevOps\devopsdemo>git push -u master
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream master master
+
+
+D:\DevOps\devopsdemo>git push -f
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+
+D:\DevOps\devopsdemo>git config -l
+core.symlinks=false
+core.autocrlf=true
+core.fscache=true
+color.diff=auto
+color.status=auto
+color.branch=auto
+color.interactive=true
+help.format=html
+rebase.autosquash=true
+http.sslcainfo=D:/Git/mingw64/ssl/certs/ca-bundle.crt
+credential.helper=manager
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+user.name=srinivass
+user.email=srinivasarao.sunnam29@gmail.com
+init.defaultbranch=master
+core.repositoryformatversion=0
+core.filemode=false
+core.bare=false
+core.logallrefupdates=true
+core.symlinks=false
+core.ignorecase=true
+
+D:\DevOps\devopsdemo>git remote add origin master
+
+D:\DevOps\devopsdemo>git status
+On branch master
+nothing to commit, working directory clean
+
+D:\DevOps\devopsdemo>git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+D:\DevOps\devopsdemo>git push origin master
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+D:\DevOps\devopsdemo>git remote add origin https://github.com/srinivassun/devopsdemo.git
+fatal: remote origin already exists.
+
+D:\DevOps\devopsdemo>git push
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+
+
+D:\DevOps\devopsdemo>git push --set-upstream origin master
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+D:\DevOps\devopsdemo>git branch -M main
+
+D:\DevOps\devopsdemo>git remote add origin https://github.com/srinivassun/devopsdemo.git
+fatal: remote origin already exists.
+
+D:\DevOps\devopsdemo>git push -u origin main
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+D:\DevOps\devopsdemo>git status
+On branch main
+nothing to commit, working directory clean
+
+D:\DevOps\devopsdemo>git push -u origin master
+error: src refspec master does not match any.
+error: failed to push some refs to 'master'
+
+D:\DevOps\devopsdemo>git branch -M master
+
+D:\DevOps\devopsdemo>git status
+On branch master
+nothing to commit, working directory clean
+
+D:\DevOps\devopsdemo>git push -u origin master
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+D:\DevOps\devopsdemo>git add README.MD
+fatal: pathspec 'README.MD' did not match any files
+
+D:\DevOps\devopsdemo>git init
+Reinitialized existing Git repository in D:/DevOps/devopsdemo/.git/
+
+D:\DevOps\devopsdemo>git branch
+* master
+
+D:\DevOps\devopsdemo>git push -u master
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+D:\DevOps\devopsdemo>git push -u origin https://github.com/srinivassun/devopsdemo.git
+fatal: remote part of refspec is not a valid name in https://github.com/srinivassun/devopsdemo.git
+
+D:\DevOps\devopsdemo>git checkout "master"
+Already on 'master'
+
+D:\DevOps\devopsdemo>git log
+commit a6bb53e961e7a5136eb0f5926c1dbce175580215
+Author: srinivass <srinivasarao.sunnam29@gmail.com>
+Date:   Fri Jan 31 22:11:35 2025 +0530
+
+    First Commit
+
+D:\DevOps\devopsdemo>git push -u origin master
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+D:\DevOps\devopsdemo>git push origin master
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+D:\DevOps\devopsdemo>git remote -v
+origin  master (fetch)
+origin  master (push)
+
+D:\DevOps\devopsdemo>git fetch
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+D:\DevOps\devopsdemo>git remote remove origin
+
+D:\DevOps\devopsdemo>git remote -v
+
+D:\DevOps\devopsdemo>git remote add origin https://github.com/srinivassun/devopsdemo.git
+
+D:\DevOps\devopsdemo>git remote -v
+origin  https://github.com/srinivassun/devopsdemo.git (fetch)
+origin  https://github.com/srinivassun/devopsdemo.git (push)
+
+D:\DevOps\devopsdemo>git branch
+* master
+
+D:\DevOps\devopsdemo>git push -u origin master
+Fatal: HttpRequestException encountered.
+Username for 'https://github.com': srinivassun
+Password for 'https://srinivassun@github.com':
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 227 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote: To https://github.com/srinivassun/devopsdemo.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+
+D:\DevOps\devopsdemo>git branch "feature1"
+
+D:\DevOps\devopsdemo>git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+nothing to commit, working directory clean
+
+D:\DevOps\devopsdemo>git checkout "feature1"
+Switched to branch 'feature1'
+
+D:\DevOps\devopsdemo>git stauts
+git: 'stauts' is not a git command. See 'git --help'.
+
+Did you mean this?
+        status
+
+D:\DevOps\devopsdemo>git status
+On branch feature1
+nothing to commit, working directory clean
+
+D:\DevOps\devopsdemo>git status
+On branch feature1
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        File3.txt
+        File4.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\DevOps\devopsdemo>git add .
+
+D:\DevOps\devopsdemo>git status
+On branch feature1
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   File3.txt
+        new file:   File4.txt
+
+
+D:\DevOps\devopsdemo>git commit -m "Branch Commit"
+[feature1 e7ef1eb] Branch Commit
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 File3.txt
+ create mode 100644 File4.txt
+
+D:\DevOps\devopsdemo>git status
+On branch feature1
+nothing to commit, working directory clean
+
+D:\DevOps\devopsdemo>git push -u origin feature1
+Fatal: HttpRequestException encountered.
+Username for 'https://github.com': srinivassun
+Password for 'https://srinivassun@github.com':
+Counting objects: 2, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 254 bytes | 0 bytes/s, done.
+Total 2 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'feature1' on GitHub by visiting:
+remote:      https://github.com/srinivassun/devopsdemo/pull/new/feature1
+remote:
+To https://github.com/srinivassun/devopsdemo.git
+ * [new branch]      feature1 -> feature1
+Branch feature1 set up to track remote branch feature1 from origin.
+
+D:\DevOps\devopsdemo>git checkout "master"
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+D:\DevOps\devopsdemo>git merge feature1
+Updating a6bb53e..e7ef1eb
+Fast-forward
+ File3.txt | 0
+ File4.txt | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 File3.txt
+ create mode 100644 File4.txt
+
+D:\DevOps\devopsdemo>git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working directory clean
+
+D:\DevOps\devopsdemo>git push -u origin master
+Fatal: HttpRequestException encountered.
+Username for 'https://github.com': srinivassun
+Password for 'https://srinivassun@github.com':
+Total 0 (delta 0), reused 0 (delta 0)
+remote: To https://github.com/srinivassun/devopsdemo.git
+   a6bb53e..e7ef1eb  master -> master
+Branch master set up to track remote branch master from origin.
+
+D:\DevOps\devopsdemo>git branch
+  feature1
+* master
+
+D:\DevOps\devopsdemo>git branch "feature1"
+fatal: A branch named 'feature1' already exists.
+
+D:\DevOps\devopsdemo>git checkout "feature1"
+Switched to branch 'feature1'
+Your branch is up-to-date with 'origin/feature1'.
+
+D:\DevOps\devopsdemo>git branch
+* feature1
+  master
+
+D:\DevOps\devopsdemo>git checkout "master"
+Switched to branch 'master'
+Your branch is up-to-date with 'origin/master'.
+
+D:\DevOps\devopsdemo>git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   File4.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\DevOps\devopsdemo>git add .
+
+D:\DevOps\devopsdemo>git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   File4.txt
+
+
+D:\DevOps\devopsdemo>git commit -m "Third Commit"
+[master 6e25d29] Third Commit
+ 1 file changed, 1 insertion(+)
+
+D:\DevOps\devopsdemo>git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+nothing to commit, working directory clean
+
+D:\DevOps\devopsdemo>git push -u origin master
+Fatal: HttpRequestException encountered.
+Username for 'https://github.com': srinivassun
+Password for 'https://srinivassun@github.com':
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 266 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/srinivassun/devopsdemo.git
+   e7ef1eb..6e25d29  master -> master
+Branch master set up to track remote branch master from origin.
+
+D:\DevOps\devopsdemo>git checkout "feature1"
+Switched to branch 'feature1'
+Your branch is up-to-date with 'origin/feature1'.
+
+D:\DevOps\devopsdemo>git merge master
+Updating e7ef1eb..6e25d29
+Fast-forward
+ File4.txt | 1 +
+ 1 file changed, 1 insertion(+)
+
+D:\DevOps\devopsdemo>git push -u origin feature1
+Fatal: HttpRequestException encountered.
+Username for 'https://github.com': srinivassun
+Password for 'https://srinivassun@github.com':
+Total 0 (delta 0), reused 0 (delta 0)
+remote: To https://github.com/srinivassun/devopsdemo.git
+   e7ef1eb..6e25d29  feature1 -> feature1
+Branch feature1 set up to track remote branch feature1 from origin.
+
+D:\DevOps\devopsdemo>
